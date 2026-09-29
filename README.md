@@ -97,6 +97,11 @@ flowchart TD
 
 ## 6. Deploy
 
-**Vercel / Netlify** (khuyến nghị, dễ nhất): import repo từ GitHub, framework = Vite, build `npm run build`, output `dist`. File `vercel.json` và `public/_redirects` đã cấu hình để refresh ở `/todo/abc` không bị 404.
+**Vercel + GitHub Actions**: workflow `.github/workflows/ci-deploy.yml` chạy lint → test → build cho mọi push/PR, sau đó:
 
-**GitHub Pages** (tự động qua GitHub Actions): vào *Settings → Pages → Source* chọn **GitHub Actions**. Mỗi lần push lên `main`, workflow `.github/workflows/ci-deploy.yml` sẽ lint → test → build → deploy. Link: `https://<username>.github.io/<tên-repo>/`.
+- PR → deploy **preview** (link hiện trong tab *Summary* của lần chạy)
+- push/merge vào `main` → deploy **production**
+
+Cần tạo 3 secret trong *GitHub → Settings → Secrets and variables → Actions*: `VERCEL_TOKEN`, `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID` (lấy từ `.vercel/project.json` sau khi chạy `npx vercel link`). `vercel.json` tắt auto-deploy của Vercel Git (`git.deploymentEnabled: false`) để không bị deploy trùng, và cấu hình rewrite để refresh ở `/todo/abc` không bị 404.
+
+**Netlify**: `public/_redirects` đã cấu hình SPA fallback.
