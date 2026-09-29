@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ứng dụng quản lý công việc — thêm, sửa, xóa, lọc, thống kê. Hỗ trợ dark mode, 2 ngôn ngữ và dùng offline." />
+    <meta name="theme-color" content="#4f46e5" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <title>Việc Cần Làm · Todo App</title>
+    <script>
+      // Áp dụng theme trước khi render để tránh nháy màu (FOUC)
+      try {
+        var s = JSON.parse(localStorage.getItem('todo-app:settings') || '{}');
+        var th = s.theme || 'system';
+        if (th === 'system') th = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = th;
+        if (s.lang) document.documentElement.lang = s.lang;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <noscript>Vui lòng bật JavaScript để sử dụng ứng dụng.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
