@@ -8,7 +8,7 @@ const vi = {
   'nav.menu': 'Mở menu',
   'nav.top': 'Lên đầu trang',
 
-  'home.title': 'Danh sách công việc',
+  'home.title': 'Danh sách công việc 1',
   'home.subtitle': '{active} việc còn lại · {completed} đã xong',
   'home.quickPlaceholder': 'Thêm nhanh một công việc rồi nhấn Enter…',
   'home.quickLabel': 'Thêm nhanh công việc',
