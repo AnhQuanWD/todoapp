@@ -1,5 +1,5 @@
 const vi = {
-  'app.name': 'Việc Cần Làm 1',
+  'app.name': 'Việc Cần Làm',
   'nav.home': 'Công việc',
   'nav.new': 'Thêm mới',
   'nav.stats': 'Thống kê',
