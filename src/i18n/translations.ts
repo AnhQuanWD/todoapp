@@ -1,5 +1,5 @@
 const vi = {
-  'app.name': 'Việc Cần Làm',
+  'app.name': 'Việc Cần Làm 1',
   'nav.home': 'Công việc',
   'nav.new': 'Thêm mới',
   'nav.stats': 'Thống kê',
@@ -8,7 +8,7 @@ const vi = {
   'nav.menu': 'Mở menu',
   'nav.top': 'Lên đầu trang',
 
-  'home.title': 'Danh sách công việc 1',
+  'home.title': 'Danh sách công việc',
   'home.subtitle': '{active} việc còn lại · {completed} đã xong',
   'home.quickPlaceholder': 'Thêm nhanh một công việc rồi nhấn Enter…',
   'home.quickLabel': 'Thêm nhanh công việc',
