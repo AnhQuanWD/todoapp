@@ -2,9 +2,6 @@
 
 Bài tập cá nhân môn **Web UI Programming**. Ứng dụng quản lý công việc viết bằng **React 19 + TypeScript + Vite**, có routing, lưu localStorage, responsive, dark mode, hai ngôn ngữ (Việt/Anh), PWA chạy offline và unit test.
 
-> **Họ tên:** … · **MSHV:** … · **Lớp:** …
-> **Demo:** https://… · **Video:** https://…
-
 ---
 
 ## 1. Tính năng
